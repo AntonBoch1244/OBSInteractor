@@ -24,14 +24,6 @@ class GStreamer:
             print("GStreamer not working with this arguments")
 
     def createNewStream(self, sid, caps=None, stream_type=8, stream_flags=2):
-        # ** Explanation:
-        # sid is new stream name, used only for gstreamer
-        # caps can be None
-        # stream_type is type of stream for demuxers
-        #   I set it to 8 cause any stream we are creating here
-        #   can contain subtitles, audio and video
-        # stream_flags is transmitting flags for demuxers
-        #   I set it to 2 cause of it is default behavior be selective
         stream: Gst.Stream
 
         if stream_type is Gst.StreamType:
